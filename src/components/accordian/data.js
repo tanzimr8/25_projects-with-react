@@ -13,6 +13,11 @@ const data = [
         id:3,
         question: "RESEARCH FACILITIES?",
         answer: "It currently remains open 3 & a half hours a day, from 9.00am to 12.30Pm. Three researchers can work together. For financial constraints it can not provide much facilities to the researchers.",
+    },
+    {
+        id:4,
+        question: "GUEST ROOMS?",
+        answer: "It has two guest rooms for the readers. Only researchers can stay their at night only for the purpose of research.",
     }
 ];
 export default data;

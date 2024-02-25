@@ -1,0 +1,31 @@
+h2{
+    text-transform: uppercase;
+}
+.wrapper{
+    height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    border: none;
+    padding: 12px 36px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+button:hover{
+    background: #000;
+    color: #fff;
+}
+
+.accordian{
+    width: 500px;
+}
+.item{
+    margin-bottom: 10px;
+}
+.item span{
+    margin-right: 5px;
+}
