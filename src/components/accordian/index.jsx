@@ -4,11 +4,21 @@ import './style.css'
 export default function Accordian(){
     const [selected, setSelected] = useState(null);
     const [enableMulti,setEnableMulti] = useState(false);
+    const [multiple,setMultiple] = useState([]);
     const handleSingleSelection = (getCurrentID) =>{
         setSelected(getCurrentID === selected ? null : getCurrentID);
     }
     const handleMultiSelection =(getCurrentID)=>{
-        alert("Multi selected");
+        // alert("Multi selected");
+        const copyOfMultiple = [...multiple];
+        const findIndexOfCurrentID = copyOfMultiple.indexOf(getCurrentID);
+        if(findIndexOfCurrentID === -1){
+            copyOfMultiple.push(getCurrentID);
+        }
+        else{
+            copyOfMultiple.splice(findIndexOfCurrentID,1)
+        }
+        setMultiple(copyOfMultiple);
     }
     return (
         <div className='wrapper'>
@@ -27,9 +37,11 @@ export default function Accordian(){
                                 <h3><span>+</span>{dataItem.question}</h3>                                
                             </div>
                             {
-                                selected === dataItem.id ? 
+                                enableMulti ? 
+                                (multiple.indexOf(dataItem.id) !== -1) && (<div className='content'>{dataItem.answer}</div>)
+                                :
+                                selected === dataItem.id &&
                                 <div className='content'>{dataItem.answer}</div>
-                                : null
                             }
                             <hr/>
                         </div>)
