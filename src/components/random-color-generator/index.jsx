@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import './styles.css';
 export default function RandomColorGen(){
     const [color,setColor] = useState('#000000');
@@ -14,6 +14,9 @@ export default function RandomColorGen(){
         }
         setColor(hexNumber);
     }
+    useEffect(()=>{
+        typeOfColor === 'hex' ? setTypeHexColor() : setTypeRgbColor()
+    },[typeOfColor])
     const setTypeRgbColor = ()=>{
         const R = createRandomDigit(256);
         const G = createRandomDigit(256);
@@ -27,7 +30,7 @@ export default function RandomColorGen(){
             height: '100vh',
             background: color
         }}>
-            <h2>Name of Color: {color}</h2>
+            <h2>Name of {typeOfColor} Color: {color}</h2>
             <div className="buttons">
                 <button onClick={()=>{setTypeOfColor('hex')}}>Generate HEX color</button>
                 <button onClick={()=>{setTypeOfColor('rgb')}}>Generate RGB color</button>
