@@ -9,15 +9,9 @@ export default function Accordian(){
         setSelected(getCurrentID === selected ? null : getCurrentID);
     }
     const handleMultiSelection =(getCurrentID)=>{
-        // alert("Multi selected");
         const copyOfMultiple = [...multiple];
         const findIndexOfCurrentID = copyOfMultiple.indexOf(getCurrentID);
-        if(findIndexOfCurrentID === -1){
-            copyOfMultiple.push(getCurrentID);
-        }
-        else{
-            copyOfMultiple.splice(findIndexOfCurrentID,1)
-        }
+        findIndexOfCurrentID === -1 ? copyOfMultiple.push(getCurrentID) : copyOfMultiple.splice(findIndexOfCurrentID,1);
         setMultiple(copyOfMultiple);
     }
     return (
