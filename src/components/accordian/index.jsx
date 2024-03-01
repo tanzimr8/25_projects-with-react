@@ -20,9 +20,9 @@ export default function Accordian(){
             <button onClick={()=>{setEnableMulti(!enableMulti)}}>{enableMulti ? "Disable Multi Selection" : "Enable Multi Selection"}</button>
             <div className='accordian'>
                 {data && data.length > 0 ? (
-                    data.map((dataItem)=>{
+                    data.map((dataItem,index)=>{
                         return(
-                        <div className="item">
+                        <div key={index} className="item">
                             <div onClick={
                                 enableMulti ?
                                 ()=>{handleMultiSelection(dataItem.id)} 

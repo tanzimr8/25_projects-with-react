@@ -1,24 +1,12 @@
-div{
-    color:#fff;
+.randomColors{
+    /* color:#fff; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-button{
-    border: none;
-    padding: 12px 36px;
-    cursor: pointer;
-    text-transform: uppercase;
-    background: #2E9599;
-    color: #fff;
-}
-button:hover{
-    background: #fff;
-    color: #000;
-}
 .buttons{
-    display: flex;
-    gap: 10px;
+    display: flex!important;
     flex-direction: row;
+    gap: 10px;
 }

@@ -25,7 +25,7 @@ export default function RandomColorGen(){
         setColor(rgbNumber);
     }
     return(
-        <div style={{
+        <div className="randomColors" style={{
             width: '100vw',
             height: '100vh',
             background: color
