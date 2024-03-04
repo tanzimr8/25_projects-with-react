@@ -44,37 +44,38 @@ const ImageSlider = ({ url, page, limit, }) => {
         </>)
     }
     return (
-        <div className='slider-wrapper'>
-        <div className='slider-container'>
-            <BsArrowLeftCircleFill onClick={handleLeftClick} className='arrow arrow-left' />
-            {
-                images && images.length ?
-                    (
+        <section>
+            <h2>Image slider</h2>
+            <div className='slider-container'>
+                <BsArrowLeftCircleFill onClick={handleLeftClick} className='arrow arrow-left' />
+                {
+                    images && images.length ?
+                        (
+                            images.map((image, index) => {
+                                return (
+                                    <img
+                                        className={currentslider === index ? 'api-img current-image' : 'api-img current-image hide-current-image'}
+                                        key={image.id}
+                                        alt={image.download_url}
+                                        src={image.download_url}
+                                    />
+                                )
+                            })
+                        )
+                        : null
+                }
+                <BsArrowRightCircleFill onClick={handleRightClick} className='arrow arrow-right' />
+                <span className='circle-indicators'>
+                    {
                         images.map((image, index) => {
                             return (
-                                <img
-                                    className={currentslider === index ? 'api-img current-image' : 'api-img current-image hide-current-image'}
-                                    key={image.id}
-                                    alt={image.download_url}
-                                    src={image.download_url}
-                                />
+                                <div onClick={() => { setCurrentslider(index) }} key={index} className={currentslider === index ? 'circle-indicator' : 'circle-indicator inactive-circle-indicator'}></div>
                             )
                         })
-                    )
-                    : null
-            }
-            <BsArrowRightCircleFill onClick={handleRightClick} className='arrow arrow-right' />
-            <span className='circle-indicators'>
-                {
-                    images.map((image, index) => {
-                        return (
-                            <div onClick={()=>{setCurrentslider(index)}} key={index} className={currentslider === index ? 'circle-indicator' : 'circle-indicator inactive-circle-indicator'}></div>
-                        )
-                    })
-                }
-            </span>
-        </div>
-        </div>
+                    }
+                </span>
+            </div>
+        </section>
     )
 }
 

@@ -15,10 +15,10 @@ export default function Accordian(){
         setMultiple(copyOfMultiple);
     }
     return (
-        <div className='wrapper'>
+        <section>
             <h2>Accordian with React JS</h2>
-            <button onClick={()=>{setEnableMulti(!enableMulti)}}>{enableMulti ? "Disable Multi Selection" : "Enable Multi Selection"}</button>
-            <div className='accordian'>
+            <button className='btn btn-primary my-3' onClick={()=>{setEnableMulti(!enableMulti)}}>{enableMulti ? "Disable Multi Selection" : "Enable Multi Selection"}</button>
+            <div className='accordian my-3'>
                 {data && data.length > 0 ? (
                     data.map((dataItem,index)=>{
                         return(
@@ -28,7 +28,7 @@ export default function Accordian(){
                                 ()=>{handleMultiSelection(dataItem.id)} 
                                 :()=>{handleSingleSelection(dataItem.id)}
                                 } className="title">
-                                <h3><span>+</span>{dataItem.question}</h3>                                
+                                <h5><span>+</span>{dataItem.question}</h5>                                
                             </div>
                             {
                                 enableMulti ? 
@@ -44,6 +44,6 @@ export default function Accordian(){
                     <div>No data</div>
                 )}
             </div>
-        </div>
+        </section>
       )
 }

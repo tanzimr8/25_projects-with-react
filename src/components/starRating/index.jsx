@@ -13,7 +13,7 @@ const StarRating = ({ numberOfStar }) => {
         setHover(rating);
     }
     return (
-        <>
+        <section>
         <h2>Star rating</h2>
         <div className='star-rating'>
             {
@@ -32,7 +32,7 @@ const StarRating = ({ numberOfStar }) => {
                 })
             }
         </div>
-        </>
+        </section>
     );
 }
 export default StarRating;

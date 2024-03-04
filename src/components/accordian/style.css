@@ -8,6 +8,7 @@ h2{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(26, 158, 79);
 }
 button{
     border: none;
@@ -22,6 +23,9 @@ button:hover{
 
 .accordian{
     width: 500px;
+}
+.title{
+    cursor: pointer;
 }
 .item{
     margin-bottom: 10px;

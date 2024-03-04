@@ -1,13 +1,18 @@
 body{
   overflow-x: hidden;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: 'Inconsolata', monospace!important;
   
 }
 h2{
   text-align: center;
+}
+section{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 /* Star rating */
 .star{
@@ -83,7 +88,4 @@ background-color: #ccc;
 }
  .hide-current-image{
   display: none;
-}
-.inactive-circle-indicator{
-
 }
