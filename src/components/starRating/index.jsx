@@ -16,10 +16,12 @@ const StarRating = ({ numberOfStar }) => {
         <section>
         <h2>Star rating</h2>
         <div className='star-rating'>
+            <div>
             {
                 [...Array(numberOfStar)].map((_, index) => {
                     index += 1;
                     return (
+                        <>
                         <FaStar
                             className={index <= (hover || rating) ? 'star star-active' : 'star star-inactive'}
                             key={index}
@@ -28,9 +30,14 @@ const StarRating = ({ numberOfStar }) => {
                             onMouseLeave={handleMouseLeave}
                             size={30}
                         />
+                        </>
                     )
                 })
             }
+            </div>
+            <div>
+            {(rating > 0) ? `You have given ${rating} /10`  : 'Not rated yet'}
+            </div>
         </div>
         </section>
     );

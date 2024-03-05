@@ -1,9 +1,12 @@
 import React from 'react'
 
-const Home = () => {
+const Home = ({project_count}) => {
   return (
-    <div>Home</div>
+    <section>
+        <h1>{project_count} Different projects with React JS</h1>
+        <p>I am trying to learn JavaScript</p>
+        <a href="tanzim.rahman.com">Find me</a>
+    </section>
   )
 }
-
-export default Home
+export default Home;

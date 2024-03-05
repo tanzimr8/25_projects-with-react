@@ -6,8 +6,11 @@ body{
 h2{
   text-align: center;
 }
+navbar{
+  min-height: 10vh;
+}
 section{
-  min-height: 100vh;
+  min-height: 90vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -22,6 +25,8 @@ section{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 1em;
 }
 .star-active{
   color: #ece140;
@@ -88,4 +93,27 @@ background-color: #ccc;
 }
  .hide-current-image{
   display: none;
+}
+
+.products-wrapper{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 2em;
+  padding: 30px 18px
+}
+.product{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  padding: 20px;
+  border: 1px solid gray;
+
+}
+.img-product{
+  width: 350px;
+  height: auto;
+  object-fit: cover;
+  border: 2px solid #fff;
 }

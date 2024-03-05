@@ -6,7 +6,7 @@ import RandomColorGen from './components/random-color-generator';
 import StarRating from './components/starRating';
 import ImageSlider from './components/ImageSlider';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import routes from './routes';
+import {routes} from './routes';
 
 
 function App() {
@@ -14,10 +14,9 @@ function App() {
     <>
       <Navbar />
       <Routes>
-          <Route path='/accordian' element={<Accordian/>} />
-          <Route path='/color' element={<RandomColorGen/>} />
-          <Route path='/rating' element={<StarRating numberOfStar={10}/>} />
-          <Route path='/slider' element={<ImageSlider url={'https://picsum.photos/v2/list'} page ={'1'} limit={'5'}/>} />
+          {routes.map((route,index)=>{
+          return <Route path={route.path} element={route.element} key={index} />
+          })}
       </Routes>
       </>
   );
