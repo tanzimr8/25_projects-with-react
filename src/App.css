@@ -99,7 +99,7 @@ background-color: #ccc;
   display: grid;
   grid-template-columns: repeat(4,1fr);
   grid-gap: 2em;
-  padding: 30px 18px
+  padding: 30px 18px;
 }
 .product{
   display: flex;
