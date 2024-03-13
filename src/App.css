@@ -1,7 +1,7 @@
 body{
   overflow-x: hidden;
   font-family: 'Inconsolata', monospace!important;
-  
+   
 }
 h2{
   text-align: center;
@@ -116,4 +116,8 @@ background-color: #ccc;
   height: auto;
   object-fit: cover;
   border: 2px solid #fff;
+}
+.menuItems{
+  display: flex;
+  gap: .5em;
 }

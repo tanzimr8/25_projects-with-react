@@ -7,6 +7,8 @@ import StarRating from './components/starRating';
 import ImageSlider from './components/ImageSlider';
 import LoadMore from './components/LoadMore';
 import TreeView from './components/tree-view';
+import { MenuList as menu } from './components/tree-view/data';
+
 
 export const routes = [
   { path: '/', element: <Home project_count={5}/> },
@@ -17,6 +19,6 @@ export const routes = [
   page ={'1'}
   limit={'5'} /> },
   { path: '/load-more', element: <LoadMore/>},
-  { path: '/tree-view', element: <TreeView/>},
+  { path: '/tree-view', element: <TreeView menu={menu}/>},
 ];
 
