@@ -8,6 +8,7 @@ import ImageSlider from './components/ImageSlider';
 import LoadMore from './components/LoadMore';
 import TreeView from './components/tree-view';
 import { MenuList as menu } from './components/tree-view/data';
+import QRCOdeGenerator from './components/QRCodeGenerator';
 
 
 export const routes = [
@@ -20,5 +21,6 @@ export const routes = [
   limit={'5'} /> },
   { path: '/load-more', element: <LoadMore/>},
   { path: '/tree-view', element: <TreeView menu={menu}/>},
+  { path: '/qr-code', element: <QRCOdeGenerator/>},
 ];
 

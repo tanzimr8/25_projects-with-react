@@ -5,8 +5,8 @@ const TreeView = ({menu}) => {
         <>
         {
             menu.map((menuItem,index)=>{
-                return (<ul>
-                    <MenuItem menuItem={menuItem} index={index}/>
+                return (<ul key={index}>
+                    <MenuItem  menuItem={menuItem} index={index}/>
                 </ul>)
             })
         }
