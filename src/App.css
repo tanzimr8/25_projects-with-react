@@ -121,3 +121,9 @@ background-color: #ccc;
   display: flex;
   gap: .5em;
 }
+.QrCodeBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

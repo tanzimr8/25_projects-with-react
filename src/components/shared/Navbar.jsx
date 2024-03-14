@@ -19,6 +19,7 @@ const Navbar = () => {
                         <li class="nav-item"><NavLink className='nav-link' to="/load-more">Load More</NavLink></li>
                         <li class="nav-item"><NavLink className='nav-link' to="/tree-view">TreeView</NavLink></li>
                         <li class="nav-item"><NavLink className='nav-link' to="/qr-code">QRCodeGenerator</NavLink></li>
+                        <li class="nav-item"><NavLink className='nav-link' to="/scroll-indicator">ScrollIndicator</NavLink></li>
                     </ul>
                 </div>
             </div>
