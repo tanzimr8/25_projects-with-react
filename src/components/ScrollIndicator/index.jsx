@@ -4,6 +4,7 @@ const ScrollIndicator = ({ url }) => {
     const [products, setProducts] = useState([]);
     const [err, setErr] = useState('');
     const [loading, setLoading] = useState(false);
+    const [scroll, setScroll] = useState(0);
     // console.log(document.documentElement.scrollTop);
 
     const fetchData = async (getUrl) => {
@@ -24,24 +25,27 @@ const ScrollIndicator = ({ url }) => {
         let howMuchScrolled = document.documentElement.scrollTop;
         let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         let currentScrollPercentage = howMuchScrolled / height * 100;
+        setScroll(currentScrollPercentage);
     }
     useEffect(() => {
         fetchData(url);
     }, [url]);
     useEffect(()=>{
         window.addEventListener('scroll',handleScrollChange);
+
         return ()=>{
             window.removeEventListener('scroll',()=>{})
         }
     });
     return (
         <section>
-        <div className="pregress-container">
-            <h2>Scroll Indicator</h2>
+        <div className="progress-container">
+            <h2>Scroll Indicator {`${Math.round(scroll)} %`}</h2>
             <div className="progress">
-                <div className="current-progress"></div>
+                <div className="current-progress" style={{width: `${scroll}%`}}></div>
             </div>
         </div>
+        <div className="produc-lists">
             {products && products.length > 0 ? (
                 products.map((product) => {
                     return (
@@ -52,6 +56,7 @@ const ScrollIndicator = ({ url }) => {
                     )
                 })
             ) : 'no data'}
+            </div>
         </section>
     )
 }
