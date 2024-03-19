@@ -20,6 +20,7 @@ const Navbar = () => {
                         <li class="nav-item"><NavLink className='nav-link' to="/tree-view">TreeView</NavLink></li>
                         <li class="nav-item"><NavLink className='nav-link' to="/qr-code">QRCodeGenerator</NavLink></li>
                         <li class="nav-item"><NavLink className='nav-link' to="/scroll-indicator">ScrollIndicator</NavLink></li>
+                        <li class="nav-item"><NavLink className='nav-link' to="/modal">Modal</NavLink></li>
                     </ul>
                 </div>
             </div>

@@ -10,6 +10,7 @@ import TreeView from './components/tree-view';
 import { MenuList as menu } from './components/tree-view/data';
 import QRCodeGenerator from './components/QRCodeGenerator';
 import ScrollIndicator from './components/ScrollIndicator';
+import Modal from './components/Modal/Modal';
 
 
 export const routes = [
@@ -23,6 +24,7 @@ export const routes = [
   { path: '/load-more', element: <LoadMore/>},
   { path: '/tree-view', element: <TreeView menu={menu}/>},
   { path: '/qr-code', element: <QRCodeGenerator/>},
+  { path: '/modal', element: <Modal/>},
   { path: '/scroll-indicator', element: <ScrollIndicator url={'https://dummyjson.com/products?limit=100'}/>},
 ];
 
