@@ -1,0 +1,25 @@
+.blurred{
+    opacity: 0.5;
+}
+.card-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: #dedede;
+    animation-name: animateCard;
+    animation-duration: 0.5s;
+    z-index: 2;
+    opacity: 1!important;
+}
+
+@keyframes animateCard{
+    from{
+        top: -50%;
+        opacity: 0;
+    }
+    to{
+        top: 50%;
+        opacity: 1;
+    }
+}

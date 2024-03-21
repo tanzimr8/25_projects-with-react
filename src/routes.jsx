@@ -11,6 +11,7 @@ import { MenuList as menu } from './components/tree-view/data';
 import QRCodeGenerator from './components/QRCodeGenerator';
 import ScrollIndicator from './components/ScrollIndicator';
 import Modal from './components/Modal/Modal';
+import GitHubProfileFinder from './components/GitHubProfileFinder';
 
 
 export const routes = [
@@ -26,5 +27,6 @@ export const routes = [
   { path: '/qr-code', element: <QRCodeGenerator/>},
   { path: '/modal', element: <Modal/>},
   { path: '/scroll-indicator', element: <ScrollIndicator url={'https://dummyjson.com/products?limit=100'}/>},
+  { path: '/git', element: <GitHubProfileFinder url={'https://dummyjson.com/products?limit=100'}/>},
 ];
 
