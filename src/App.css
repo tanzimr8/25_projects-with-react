@@ -152,3 +152,21 @@ background-color: #ccc;
   justify-content: center;
   align-items: center;
 }
+.search-profile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  flex-direction: column;
+}
+.search-profile label{
+  text-transform: capitalize;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.search-profile input{
+  border: 1px solid #000;
+  padding-left: 15px;
+  min-height: 29px;
+  border-radius: 25px;
+}
