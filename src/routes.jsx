@@ -12,6 +12,7 @@ import QRCodeGenerator from './components/QRCodeGenerator';
 import ScrollIndicator from './components/ScrollIndicator';
 import Modal from './components/Modal/Modal';
 import GitHubProfileFinder from './components/GitHubProfileFinder';
+import GithubProfileViewer from './components/Re-Do/GithubProfileViewer';
 
 
 export const routes = [
@@ -27,6 +28,7 @@ export const routes = [
   { path: '/qr-code', element: <QRCodeGenerator/>},
   { path: '/modal', element: <Modal/>},
   { path: '/scroll-indicator', element: <ScrollIndicator url={'https://dummyjson.com/products?limit=100'}/>},
-  { path: '/git', element: <GitHubProfileFinder url={'https://dummyjson.com/products?limit=100'}/>},
+  // { path: '/git', element: <GitHubProfileFinder url={'https://dummyjson.com/products?limit=100'}/>},
+  { path: '/git-search', element: <GithubProfileViewer/>},
 ];
 
